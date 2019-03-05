@@ -1,0 +1,2 @@
+# cctray
+CCTray Spec
