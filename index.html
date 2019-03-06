@@ -1,1 +1,173 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>cctray.xml</title>
+  <meta name="description" content="cctray.xml is the reporting standard for continuous integration servers" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <div id="main">
+
+    <header></header>
+
+    <div id="container">
+      <h1>Multiple Project Summary Reporting Standard</h1>
+
+      <h2>cctray.xml feed</h2>
+
+      <ul>
+        <li><strong>Created:</strong> 2005-09-28</li>
+        <li><strong>Updated:</strong> 2019-03-05</li>
+      </ul>
+
+      <h2>Summary</h2>
+
+      <p>
+        CCTray.xml is an RSS-like CI server build status xml feed, which is originally developed for CruiseControl.net.
+        ThoughtWorks declared it in a standard called “Multiple Project Summary Reporting Standard”, which now have
+        become some kind of unofficial standard of CI server feed that is widely supported by all kind of popular CI
+        servers.
+      </p>
+
+      <h2>How to serve cctray.xml</h2>
+
+      </p>
+      Summary information will be available as a plain XML string retrievable through an http GET request.
+      </p>
+
+      <p>
+        The format of the XML will be as follows:
+      </p>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>type</th>
+            <th>required</th>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>The name of the project</td>
+            <td>string</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>activity</td>
+            <td>The current state of the project</td>
+            <td>string enum : Sleeping, Building, CheckingModifications <br clear="all"></td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>lastBuildStatus</td>
+            <td>A brief description of the last build</td>
+            <td>string enum : Pending, Success, Failure, Exception, Unknown</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>lastBuildLabel</td>
+            <td>A referential name for the last build</td>
+            <td>string</td>
+            <td>no</td>
+          </tr>
+          <tr>
+            <td>lastBuildTime</td>
+            <td>When the last build occurred</td>
+            <td>DateTime</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>nextBuildTime</td>
+            <td>When the next build is scheduled to occur (or when the next check to see whether a build should be
+              performed
+              is scheduled to occur)</td>
+            <td>DateTime</td>
+            <td>no</td>
+          </tr>
+          <tr>
+            <td>webUrl</td>
+            <td>A URL for where more detail can be found about this project</td>
+            <td>string (URL)</td>
+            <td>yes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Schema</h2>
+
+      <pre>
+          <code class="xml language-xml" data-lang="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;xs:schema elementFormDefault=&quot;qualified&quot;
+    xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+    &lt;xs:element name=&quot;Projects&quot;&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name=&quot;Project&quot; maxOccurs=&quot;unbounded&quot;&gt;
+                    &lt;xs:complexType&gt;
+                        &lt;xs:attribute name=&quot;name&quot; type=&quot;xs:NMTOKEN&quot; use=&quot;required&quot; /&gt;
+                        &lt;xs:attribute name=&quot;activity&quot; use=&quot;required&quot;&gt;
+                            &lt;xs:simpleType&gt;
+                                &lt;xs:restriction base=&quot;xs:NMTOKEN&quot;&gt;
+                                    &lt;xs:enumeration value=&quot;Sleeping&quot; /&gt;
+                                    &lt;xs:enumeration value=&quot;Building&quot; /&gt;
+                                    &lt;xs:enumeration value=&quot;CheckingModifications&quot; /&gt;
+                                &lt;/xs:restriction&gt;
+                            &lt;/xs:simpleType&gt;
+                        &lt;/xs:attribute&gt;
+                        &lt;xs:attribute name=&quot;lastBuildStatus&quot; use=&quot;required&quot;&gt;
+                            &lt;xs:simpleType&gt;
+                                &lt;xs:restriction base=&quot;xs:NMTOKEN&quot;&gt;
+                                    &lt;xs:enumeration value=&quot;Exception&quot; /&gt;
+                                    &lt;xs:enumeration value=&quot;Success&quot; /&gt;
+                                    &lt;xs:enumeration value=&quot;Failure&quot; /&gt;
+                                    &lt;xs:enumeration value=&quot;Unknown&quot; /&gt;
+                                &lt;/xs:restriction&gt;
+                            &lt;/xs:simpleType&gt;
+                        &lt;/xs:attribute&gt;
+                        &lt;xs:attribute name=&quot;lastBuildLabel&quot; type=&quot;xs:NMTOKEN&quot; use=&quot;required&quot; /&gt;
+                        &lt;xs:attribute name=&quot;lastBuildTime&quot; type=&quot;xs:dateTime&quot; use=&quot;required&quot; /&gt;
+                        &lt;xs:attribute name=&quot;nextBuildTime&quot; type=&quot;xs:dateTime&quot; use=&quot;optional&quot; /&gt;
+                        &lt;xs:attribute name=&quot;webUrl&quot; type=&quot;xs:string&quot; use=&quot;required&quot; /&gt;
+                    &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+&lt;/xs:schema&gt;
+          </code>
+        </pre>
+      <h2>Example</h2>
+      <pre>
+      <code class="xml language-xml" data-lang="xml">
+&lt;Projects&gt;
+  &lt;Project
+      name=&quot;SvnTest&quot;
+      activity=&quot;Sleeping&quot;
+      lastBuildStatus=&quot;Exception&quot;
+      lastBuildLabel=&quot;8&quot;
+      lastBuildTime=&quot;2005-09-28T10:30:34.6362160+01:00&quot;
+      nextBuildTime=&quot;2005-10-04T14:31:52.4509248+01:00&quot;
+      webUrl=&quot;http://mrtickle/ccnet/&quot;/&gt;
+  &lt;Project
+      name=&quot;HelloWorld&quot;
+      activity=&quot;Sleeping&quot;
+      lastBuildStatus=&quot;Success&quot;
+      lastBuildLabel=&quot;13&quot;
+      lastBuildTime=&quot;2005-09-15T17:33:07.6447696+01:00&quot;
+      nextBuildTime=&quot;2005-10-04T14:31:51.7799600+01:00&quot;
+      webUrl=&quot;http://mrtickle/ccnet/&quot;/&gt;
+&lt;/Projects&gt;
+      </code>
+    </pre>
+
+</body>
+
+</html>

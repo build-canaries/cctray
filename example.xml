@@ -1,31 +1,18 @@
 <Projects>
-    <Project 
-      name="success-sleeping-project" 
-      activity="Sleeping" 
-      lastBuildStatus="Success" 
-      lastBuildTime="2015-12-09T10:31:10Z" 
-      lastBuildLabel="648" 
-      webUrl="https://example.com/1"/>
-    <Project 
-      name="success-building-project" 
-      activity="Building" 
-      lastBuildStatus="Success" 
-      lastBuildTime="2015-12-09T10:31:10Z" 
-      lastBuildLabel="1090" 
-      webUrl="https://example/com/2"/>
-    <Project 
-      name="failure_sleeping_project" 
-      activity="Sleeping" 
-      lastBuildStatus="Failure" 
-      lastBuildTime="2015-12-09T10:31:10Z" 
-      lastBuildLabel="4729.016bdd45611fc709a88bc2b7bee99c969a8c1377" 
-      webUrl="https://example/com/3"/>
-    <Project 
-      name="failure_building_project" 
-      activity="Building" 
-      lastBuildStatus="Failure" 
-      lastBuildTime="2015-12-09T10:31:10Z" 
-      lastBuildLabel="919" 
-      webUrl="https://example/com/4"/>
-    <random stuff="random-stuff"/>
+    <Project
+        name="SvnTest"
+        activity="Sleeping"
+        lastBuildStatus="Exception"
+        lastBuildLabel="8"
+        lastBuildTime="2005-09-28T10:30:34.6362160+01:00"
+        nextBuildTime="2005-10-04T14:31:52.4509248+01:00"
+        webUrl="http://mrtickle/ccnet/"/>
+    <Project
+        name="HelloWorld"
+        activity="Sleeping"
+        lastBuildStatus="Success"
+        lastBuildLabel="13"
+        lastBuildTime="2005-09-15T17:33:07.6447696+01:00"
+        nextBuildTime="2005-10-04T14:31:51.7799600+01:00"
+        webUrl="http://mrtickle/ccnet/"/>
 </Projects>
