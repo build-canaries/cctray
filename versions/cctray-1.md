@@ -8,15 +8,15 @@ permalink: /v1/
 
 ## Introduction
 
-Various Continuous Integration monitoring / reporting tools exist. These tools work by polling Continuous Integration servers for summary information and presenting it appropriately to users.
+Various Continuous Integration monitoring/reporting tools exist. These tools work by polling Continuous Integration servers for summary information and presenting it appropriately to users.
 
 If a Continuous Integration server can offer a standard summary format, and a reporting tool can consume the same, then we get interoperability between reporting tools and CI Servers.
 
-Over the years the _cctray_ format has become the de-facto standard for this purpose. Many CI servers implement their own, richer, APIs but also implement the a _cctray_ feed to support various monitoring tools, including CCMenu.
+Over the years the _CCTray_ format has become the de-facto standard for this purpose. Many CI servers implement their own, richer, APIs but also implement the _CCTray_ feed to support various monitoring tools, including CCMenu.
 
 ## Description
 
-Summary information will be available as a plain XML string retrievable through an http GET request.
+Summary information will be available as a plain XML string retrievable through an HTTP GET request.
 
 A single `<Projects>` node, the document root, which contains 0 or many `<Project>` nodes.
 
@@ -32,7 +32,7 @@ lastBuildTime|when the last build occurred|DateTime|yes
 nextBuildTime|when the next build is scheduled to occur (or when the next check to see whether a build should be performed is scheduled to occur)|DateTime|no
 webUrl|a URL for where more detail can be found about this project|string (URL)|yes
 
-Clients that consume this XML should not rely on any optional attribute being present, and should degrade their functionality gracefully.
+Clients that consume this XML should not rely on any optional attribute being present and should degrade their functionality gracefully.
 
 ### Example
 {% highlight xml %}
