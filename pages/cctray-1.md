@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "v1"
+title:  "CCTray v1"
 date:   2005-10-07 10:23:00 +0000
 updated: 2019-03-06 10:00:00 +0000
 permalink: /v1/
