@@ -14,4 +14,4 @@ The specification leaves some open questions. If in doubt, please:
 * Use `unknown` status for all status values not mentioned in the standard.
 * If you support authentication, please respond with `401 Not Authorized` and a `WWW-Authenticate` header to feed requests without authorization headers. Do not require cookies, and do not redirect to HTML forms.
 
-If you would like your server to be mentioned on the [Supported Servers](https://github.com/erikdoe/ccmenu/wiki/Supported-Servers) page, please open a pull request with the relevant details. If you are offering a cloud hosted (SaaS) server you should include a link to setup instructions for CCMenu and/or other tools.
+If you would like your server to be mentioned on the [Supported Servers](/servers) page, please open a pull request with the relevant details. If you are offering a cloud hosted (SaaS) server you should include a link to setup instructions for CCMenu and/or other tools.
