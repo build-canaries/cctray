@@ -25,13 +25,13 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 
 ### CruiseControl.NET
 
-* Server home: <http://www.cruisecontrolnet.org/>
+* Server home: <https://ccnet.github.io/CruiseControl.NET/projects/ccnet/wiki.html>
 * Default feed location: `/XmlStatusReport.aspx` or `/ccnet/XmlStatusReport.aspx`
 * CCMenu autodetect feed URL: supported
 
 ### CruiseControl.rb
 
-* Server home: <http://cruisecontrolrb.thoughtworks.com/>
+* Server home: <https://github.com/thoughtworks/cruisecontrol.rb>
 * Default feed location: `/XmlStatusReport.aspx` or `/ccnet/XmlStatusReport.aspx`
 * CCMenu autodetect feed URL: supported
 
@@ -63,11 +63,6 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 
 * Server home: <https://semaphoreapp.com/>
 * CCMenu setup instructions: <https://github.com/renderedtext/semaphore-docs-new/blob/master/source/docs/cctry.md>
-
-### Snap CI
-
-* Server home: <https://snap-ci.com/>
-* CCMenu setup instructions: <https://docs.snap-ci.com/notifications/cctray-notifications/>
 
 ### TeamCity
 
