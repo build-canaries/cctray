@@ -59,7 +59,7 @@ Clients that consume this XML should not rely on any optional attribute being pr
 
 <h3 id="specification">Schema</h3>
 
-[Download](/schema/cctray-1.xsd)
+[Download](/schema/cctray-1.0.0.xsd)
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
