@@ -14,7 +14,10 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 ### CircleCI
 
 * Server home: <https://circleci.com/>
-* CCMenu setup instructions: <https://circleci.com/docs/polling-project-status>
+* Default feed location: `/cc.xml?circle-token=[api_token]`
+  * Generate your personal API token at <https://circleci.com/account/api>
+* CCMenu autodetect feed URL: not supported
+* Note: Only available for default branch of the projects you follow.
 
 ### CruiseControl
 
