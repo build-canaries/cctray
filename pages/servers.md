@@ -15,7 +15,7 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 
 * Server home: <https://circleci.com/>
 * Default feed location: `/cc.xml?circle-token=[api_token]`
-  * Generate your personal API token at https://circleci.com/account/api
+  * Generate your personal API token at <https://circleci.com/account/api>
 * CCMenu autodetect feed URL: not supported
 * Note: Only available for default branch of the projects you follow.
 
