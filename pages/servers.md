@@ -11,11 +11,6 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 * Server home: <https://www.buddybuild.com/>
 * CCMenu setup instructions: <http://docs.buddybuild.com/docs/ccmenu>
 
-### CircleCI
-
-* Server home: <https://circleci.com/>
-* CCMenu setup instructions: <https://circleci.com/docs/polling-project-status>
-
 ### CruiseControl
 
 * Server home: <http://cruisecontrol.sourceforge.net/>
