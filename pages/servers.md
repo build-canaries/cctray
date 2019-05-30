@@ -6,6 +6,12 @@ permalink: /servers/
 
 List of servers (in alphabetical order) that provide a CCTray feed:
 
+### Buildkite
+
+* Server home: <https://buildkite.com/>
+* Default feed location: `https://cc.buildkite.com/[org_slug].xml?access_token=[access_token]`
+* CCMenu setup instructions: <https://buildkite.com/docs/integrations/cc-menu>
+
 ### Buddybuild
 
 * Server home: <https://www.buddybuild.com/>
