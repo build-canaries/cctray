@@ -25,6 +25,13 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 * CCMenu autodetect feed URL: not supported
 * Note: Only available for default branch of the projects you follow.
 
+### Cirrus CI
+
+* Server home: <https://cirrus-ci.com>
+* Default feed location:  `https://api.cirrus-ci.com/github/{user}/{repo}/cctray.xml`
+* CCMenu autodetect feed URL: not supported
+* CCMenu setup instructions: <https://cirrus-ci.org/guide/writing-tasks/#cctray-xml>
+
 ### CruiseControl.NET
 
 * Server home: <https://ccnet.github.io/CruiseControl.NET/projects/ccnet/wiki.html>
