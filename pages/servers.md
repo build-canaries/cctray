@@ -95,4 +95,3 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 * Server home: <http://hudson-ci.org/>
 * Default feed location: `/cc.xml` or `/hudson/cc.xml`
 * CCMenu autodetect feed URL: supported
-k
