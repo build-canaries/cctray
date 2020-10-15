@@ -17,6 +17,11 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 * Server home: <https://www.buddybuild.com/>
 * CCMenu setup instructions: <http://docs.buddybuild.com/docs/ccmenu>
 
+### CCStar (Proxy for AWS CodeBuild and CodePipeline)
+
+* Server home and instructions: <https://github.com/symphoniacloud/ccstar>
+* Default feed location: `/cctray.xml`
+
 ### CircleCI
 
 * Server home: <https://circleci.com/>
