@@ -22,6 +22,10 @@ List of servers (in alphabetical order) that provide a CCTray feed:
 * Server home and instructions: <https://github.com/symphoniacloud/ccstar>
 * Default feed location: `/cctray.xml`
 
+### CCTray-Hub (Proxy for GitHub Actions)
+
+* Server home and instructions: <https://github.com/idealo/cctray-hub/>
+
 ### CircleCI
 
 * Server home: <https://circleci.com/>
