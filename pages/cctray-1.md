@@ -12,7 +12,7 @@ Various Continuous Integration monitoring/reporting tools exist. These tools wor
 
 If a Continuous Integration server can offer a standard summary format, and a reporting tool can consume the same, then we get interoperability between reporting tools and CI Servers.
 
-Over the years the _CCTray_ format has become the de-facto standard for this purpose. Many CI servers implement their own, richer, APIs but also implement the _CCTray_ feed to support various monitoring tools, including CCMenu.
+Over the years the _CCTray_ format has become the de-facto standard for this purpose. Many CI servers implement their own, richer, APIs but also implement the _CCTray_ feed to support various monitoring tools.
 
 ## Description
 

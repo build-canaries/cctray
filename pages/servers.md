@@ -4,104 +4,121 @@ title:  "Servers"
 permalink: /servers/
 ---
 
-List of servers (in alphabetical order) that provide a CCTray feed:
+## Supported
 
-### Buildkite
+List of servers (in alphabetical order) that provide a CCTray feed.
 
-* Server home: <https://buildkite.com/>
-* Default feed location: `https://cc.buildkite.com/[org_slug].xml?access_token=[access_token]`
-* CCMenu setup instructions: <https://buildkite.com/docs/integrations/cc-menu>
+__Disclaimer__, third party plugins are provided for informational purposes only, and should not be taken as recommendations.
 
-### Buddybuild
+### [AWS CodeBuild](https://docs.aws.amazon.com/codebuild/index.html)
 
-* Server home: <https://www.buddybuild.com/>
-* CCMenu setup instructions: <http://docs.buddybuild.com/docs/ccmenu>
+* Not natively supported
+* Third party plugins 
+  * [aws-codepipeline-ccxml](https://github.com/subnova/aws-codepipeline-ccxml/tree/master)
+  * [CCStar](https://github.com/symphoniacloud/ccstar)
 
-### CCStar (Proxy for AWS CodeBuild and CodePipeline)
+### [Bamboo](https://www.atlassian.com/software/bamboo)
 
-* Server home and instructions: <https://github.com/symphoniacloud/ccstar>
-* Default feed location: `/cctray.xml`
+* Not natively supported
+* Third party plugins
+  * [Bamboo CCTray proxy](https://github.com/chadlwilson/bamboo_cctray_proxy)
 
-### CCTray-Hub (Proxy for GitHub Actions)
+### [Buildkite](https://buildkite.com/)
 
-* Server home and instructions: <https://github.com/idealo/cctray-hub/>
+* Default feed location `https://cc.buildkite.com/{org_slug}.xml?access_token={access_token}`
+* [Buildkite CCTray documentation](https://buildkite.com/docs/integrations/cc-menu)
 
-### CircleCI
+### [CircleCI](https://circleci.com/)
 
-* Server home: <https://circleci.com/>
-* Feed locations: 
-  * `https://circleci.com/cc.xml?circle-token=[api_token]` - default branches of the projects you follow
-  * `https://circleci.com/gh/[organization]/[project]/tree/[branch].cc.xml?circle-token=[api_token]` - specific branch of the project
+* Feed locations 
+  * `https://circleci.com/cc.xml?circle-token={api_token}` default branches of the projects you follow
+  * `https://circleci.com/gh/{organization}/{project}/tree/{branch}.cc.xml?circle-token={api_token}` specific branch of the project
   * Generate your personal API token at <https://circleci.com/account/api>
-* CCMenu autodetect feed URL: not supported
 
-### Cirrus CI
+### [Cirrus CI](https://cirrus-ci.com)
 
-* Server home: <https://cirrus-ci.com>
-* Default feed location:  `https://api.cirrus-ci.com/github/{user}/{repo}/cctray.xml`
-* CCMenu autodetect feed URL: not supported
-* CCMenu setup instructions: <https://cirrus-ci.org/guide/writing-tasks/#cctray-xml>
+* Default feed location `https://api.cirrus-ci.com/github/{user}/{repo}/cctray.xml`
+* [Cirrus CI CCTray documentation](https://cirrus-ci.org/guide/writing-tasks/#cctray-xml)
 
-### CruiseControl.NET
+### [Concourse](https://concourse-ci.org/)
 
-* Server home: <https://ccnet.github.io/CruiseControl.NET/projects/ccnet/wiki.html>
-* Default feed location: `/XmlStatusReport.aspx` or `/ccnet/XmlStatusReport.aspx`
-* CCMenu autodetect feed URL: supported
+* Default feed location `/api/v1/teams/{team}/cc.xml`
+* [Concourse CCTray documentation](https://concourse-ci.org/observation.html#ccxml)
 
-### Go
+### [Drone CI](https://drone.io/)
 
-* Server home: <http://www.go.cd/>
-* Default feed location: `/go/cctray.xml`
-* CCMenu autodetect feed URL: supported
+* Default feed location `/api/badges/{owner}/{name}/cc.xml`
+
+### [GitHub Actions](https://github.com/features/actions)
+
+* Not natively supported
+* Third party plugins
+  * [CCTray Hub](https://github.com/idealo/cctray-hub/)
+
+### [Gitlab CI](https://about.gitlab.com/product/continuous-integration/) 
+
+* Not natively supported
+  * [Issue to add support to GitLab CI](https://gitlab.com/gitlab-org/gitlab/-/issues/16958)
+* Third party plugins
+  * [GitLab panorama](https://github.com/joblift/gitlab-panorama)
+
+### [GoCD](https://www.gocd.org/)
+
+* Default feed location `/go/cctray.xml`
   
-### Jenkins
+### [Jenkins](https://www.jenkins.io/)
 
-* Server home: <http://jenkins-ci.org/>
-* Default feed location: `/cc.xml` or `/hudson/cc.xml`
-* Jenkins version 2.173+ needs to install CCtray XML Plugin: https://plugins.jenkins.io/cctray-xml
-* CCMenu autodetect feed URL: supported
-* Note: If you have problems with authentication, please check that you have CCMenu 1.9 or newer.
+* Supported via [official CCTray XML Plugin](https://plugins.jenkins.io/cctray-xml)
+  * Note: versions prior to 2.173 had native support
+* Default feed location `/cc.xml`
 
-### Nevercode
+### [Semaphore](https://semaphoreci.com/)
 
-* Server home: <https://nevercode.io/>
-* CCMenu setup instructions: <https://developer.nevercode.io/docs/ccmenu-buildnotify-cctray>
+* Default feed location `/api/v1/projects/{hash_id}/cc.xml?auth_token={auth_token}&ccmenu=cc.xml`
+* [Semaphore CCTray documentation](https://github.com/renderedtext/semaphore-docs-new/blob/master/source/docs/cctry.md)
 
-### Semaphore
+### [TeamCity](https://www.jetbrains.com/teamcity/)
 
-* Server home: <https://semaphoreci.com/>
-* CCMenu setup instructions: <https://github.com/renderedtext/semaphore-docs-new/blob/master/source/docs/cctry.md>
+* Default feed location `/httpAuth/app/rest/cctray/projects.xml`
+* [TeamCity CCTray documentation](https://confluence.jetbrains.com/display/TW/REST+API#RESTAPI-CCTray)
 
-### TeamCity
+### [Travis CI](https://www.travis-ci.com/)
 
-* Server home: <https://www.jetbrains.com/teamcity/>
-* Default feed location: `/httpAuth/app/rest/cctray/projects.xml`
-* CCMenu setup instructions: <http://confluence.jetbrains.com/display/TW/REST+API#RESTAPI-CCTray/>
+* Default feed location `https://api.travis-ci.org/repositories/{user}/{repo}/cc.xml`
+* [Travis CI CCTray documentation](https://docs.travis-ci.com/user/cc-menu/)
 
-### Travis
+## Unsupported
 
-* Server home: <https://travis-ci.org>
-* Default feed location:  `https://api.travis-ci.org/repositories/{user}/{repo}/cc.xml`
-* CCMenu autodetect feed URL: not supported
-* CCMenu setup instructions: <http://docs.travis-ci.com/user/cc-menu/>
+List of servers (in alphabetical order) that currently have no or unknown support for a CCTray feed.
+
+* [Abstruse CI](https://github.com/bleenco/abstruse)
+* [Agola](https://agola.io/)
+* [Appcircle](https://appcircle.io/)
+* [App Center](https://appcenter.ms/)
+* [AppVeyor](https://www.appveyor.com/)
+  * [Issue to add support to AppVeyor](https://github.com/appveyor/ci/issues/67)
+* [Azure DevOps](https://azure.microsoft.com/en-us/products/devops/?nav=min)
+* [Bitrise](https://bitrise.io/)
+* [Buddy](https://buddy.works/)
+* [Buildbot](https://buildbot.net/)
+* [Codefresh](https://codefresh.io/)
+* [Codemagic](https://codemagic.io/start/)
+* [Codeship](https://codeship.com/)
+* [Evergreen](https://github.com/evergreen-ci/evergreen)
+* [Kraken CI](https://kraken.ci/)
+* [Razorops](https://razorops.com/)
+* [Vela](https://go-vela.github.io/docs/)
+* [Vexor](https://vexor.io/)
+* [Xcode Cloud](https://developer.apple.com/xcode-cloud/get-started/)
 
 ## Historic
 
-### CruiseControl
+List of servers (in alphabetical order) that have been discontinued.
 
-* Server home: <http://cruisecontrol.sourceforge.net/>
-* Default feed location (classic): `/xml`
-* Default feed location (dashboard): `/cctray.xml` or `/dashboard/cctray.xml`
-* CCMenu autodetect feed URL: supported
-
-### CruiseControl.rb
-
-* Server home: <https://github.com/thoughtworks/cruisecontrol.rb>
-* Default feed location: `/XmlStatusReport.aspx` or `/ccnet/XmlStatusReport.aspx`
-* CCMenu autodetect feed URL: supported
-
-### Hudson
-
-* Server home: <http://hudson-ci.org/>
-* Default feed location: `/cc.xml` or `/hudson/cc.xml`
-* CCMenu autodetect feed URL: supported
+* [Buddybuild](https://www.buddybuild.com/)
+* [CruiseControl](http://cruisecontrol.sourceforge.net/)
+* [CruiseControl.NET](https://ccnet.github.io/CruiseControl.NET/projects/ccnet/wiki.html)
+* [CruiseControl.rb](https://github.com/thoughtworks/cruisecontrol.rb)
+* [Hudson CI](https://github.com/hudson)
+* [Solano CI](https://github.com/solanolabs)
+* [Wercker](https://en.wikipedia.org/wiki/Wercker)
