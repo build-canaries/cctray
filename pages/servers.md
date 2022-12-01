@@ -2,15 +2,18 @@
 layout: page
 title: "Servers"
 date: 2019-04-17 21:16:00 +0000
-updated: 2022-11-30 20:47:00 +0000
+updated: 2022-12-01 10:24:00 +0000
 permalink: /servers/
 ---
+
+## Disclaimer
+
+Servers and third party plugins are provided for informational purposes only. Inclusion on this page must not be taken
+as recommendations or endorsements. Any software you use must be self evaluated to ensure it is fit for purpose.
 
 ## Supported
 
 List of servers (in alphabetical order) that provide a CCTray feed.
-
-__Disclaimer__, third party plugins are provided for informational purposes only, and should not be taken as recommendations.
 
 ### [AWS CodeBuild](https://docs.aws.amazon.com/codebuild/index.html)
 
