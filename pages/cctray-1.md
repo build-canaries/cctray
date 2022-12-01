@@ -6,14 +6,6 @@ updated: 2019-03-06 10:00:00 +0000
 permalink: /v1/
 ---
 
-## Introduction
-
-Various Continuous Integration monitoring/reporting tools exist. These tools work by polling Continuous Integration servers for summary information and presenting it appropriately to users.
-
-If a Continuous Integration server can offer a standard summary format, and a reporting tool can consume the same, then we get interoperability between reporting tools and CI Servers.
-
-Over the years the _CCTray_ format has become the de-facto standard for this purpose. Many CI servers implement their own, richer, APIs but also implement the _CCTray_ feed to support various monitoring tools.
-
 ## Description
 
 Summary information will be available as a plain XML string retrievable through an HTTP GET request.
@@ -22,19 +14,20 @@ A single `<Projects>` node, the document root, which contains 0 or many `<Projec
 
 Each `<Project>` may have the following attributes:
 
-name|description|type|required
-----|-----------|----|--------
-name|the name of the project|string|yes
-activity|the current state of the project|string enum : Sleeping, Building, CheckingModifications|yes
-lastBuildStatus|a brief description of the last build|string enum : Success, Failure, Exception, Unknown|yes
-lastBuildLabel|a referential name for the last build|string|no
-lastBuildTime|when the last build occurred|DateTime|yes
-nextBuildTime|when the next build is scheduled to occur (or when the next check to see whether a build should be performed is scheduled to occur)|DateTime|no
-webUrl|a URL for where more detail can be found about this project|string (URL)|yes
+Name           | Description                                                                                                                         | Type                                                    |Required
+---------------|-------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|--------
+name           | the name of the project                                                                                                             | string                                                  |yes
+activity       | the current state of the project                                                                                                    | string enum : Sleeping, Building, CheckingModifications |yes
+lastBuildStatus| a brief description of the last build                                                                                               | string enum : Success, Failure, Exception, Unknown      |yes
+lastBuildLabel | a referential name for the last build                                                                                               | string                                                  |no
+lastBuildTime  | when the last build occurred                                                                                                        | DateTime                                                |yes
+nextBuildTime  | when the next build is scheduled to occur (or when the next check to see whether a build should be performed is scheduled to occur) | DateTime                                                |no
+webUrl         | a URL for where more detail can be found about this project                                                                         | string (URL)                                            |yes
 
 Clients that consume this XML should not rely on any optional attribute being present and should degrade their functionality gracefully.
 
-### Example
+## Example
+
 {% highlight xml %}
 <Projects>
     <Project
@@ -57,9 +50,9 @@ Clients that consume this XML should not rely on any optional attribute being pr
 </Projects>
 {% endhighlight %}
 
-<h3 id="specification">Schema</h3>
+## Schema
 
-[Download](/schema/cctray-1.xsd)
+[Download the schema XSD](/schema/cctray-1.xsd)
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -100,3 +93,10 @@ Clients that consume this XML should not rely on any optional attribute being pr
   </xs:element>
 </xs:schema>
 {% endhighlight %}
+
+## Notes
+
+The specification leaves some open questions. If in doubt, please:
+* Provide times with a timezone, ideally in ISO8601 format with Zulu/GMT time marker.
+* Use `unknown` status for all status values not mentioned in the standard.
+* If you support authentication, please respond with `401 Not Authorized` and a `WWW-Authenticate` header to feed requests without authorization headers. Do not require cookies, and do not redirect to HTML forms.
