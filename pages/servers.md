@@ -77,6 +77,12 @@ List of servers (in alphabetical order) that provide a CCTray feed.
   * Note: versions prior to 2.173 had native support
 * Default feed location `/cc.xml`
 
+### [Kraken CI](https://kraken.ci/)
+
+* Default feed location `/bk/branch-badge/{branch-id}/cctray`
+  * example: [https://lab.kraken.ci/bk/branch-badge/2/cctray](https://lab.kraken.ci/bk/branch-badge/2/cctray)
+* [CCTray documentation](https://kraken.ci/docs/notifications#cctray) in Kraken CI
+
 ### [Semaphore](https://semaphoreci.com/)
 
 * Default feed location `/api/v1/projects/{hash_id}/cc.xml?auth_token={auth_token}&ccmenu=cc.xml`
@@ -110,7 +116,6 @@ List of servers (in alphabetical order) that currently have no or unknown suppor
 * [Codemagic](https://codemagic.io/start/)
 * [Codeship](https://codeship.com/)
 * [Evergreen](https://github.com/evergreen-ci/evergreen)
-* [Kraken CI](https://kraken.ci/)
 * [Razorops](https://razorops.com/)
 * [Vela](https://go-vela.github.io/docs/)
 * [Vexor](https://vexor.io/)
