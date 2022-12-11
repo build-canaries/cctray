@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Servers"
-date: 2019-04-17 21:16:00 +0000
-updated: 2022-12-01 10:24:00 +0000
+date: 2019-04-17 00:00:00 +0000
+updated: 2022-12-10 00:00:00 +0000
 permalink: /servers/
 ---
 
@@ -80,8 +80,8 @@ List of servers (in alphabetical order) that provide a CCTray feed.
 ### [Kraken CI](https://kraken.ci/)
 
 * Default feed location `/bk/branch-badge/{branch-id}/cctray`
-  * example: [https://lab.kraken.ci/bk/branch-badge/2/cctray](https://lab.kraken.ci/bk/branch-badge/2/cctray)
-* [CCTray documentation](https://kraken.ci/docs/notifications#cctray) in Kraken CI
+  * Example: [https://lab.kraken.ci/bk/branch-badge/2/cctray](https://lab.kraken.ci/bk/branch-badge/2/cctray)
+* [Kraken CI CCTray documentation](https://kraken.ci/docs/notifications#cctray)
 
 ### [Semaphore](https://semaphoreci.com/)
 
