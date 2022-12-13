@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Clients"
-date: 2022-10-12 14:54:00 +0000
-updated: 2022-12-01 10:26:00 +0000
+date: 2022-10-12 00:00:00 +0000
+updated: 2022-12-01 00:00:00 +0000
 permalink: /clients/
 ---
 
