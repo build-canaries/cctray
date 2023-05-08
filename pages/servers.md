@@ -2,7 +2,7 @@
 layout: page
 title: "Servers"
 date: 2019-04-17 00:00:00 +0000
-updated: 2022-12-10 00:00:00 +0000
+updated: 2023-05-08 00:00:00 +0000
 permalink: /servers/
 ---
 
@@ -59,6 +59,7 @@ List of servers (in alphabetical order) that provide a CCTray feed.
 * Not natively supported
 * Third party plugins
   * [CCTray Hub](https://github.com/idealo/cctray-hub/)
+  * [Github CCTray](https://github.com/mansab/github-cctray) - A lightweight App that provides all Github Workflows of a Repository in CCTray Specification
 
 ### [Gitlab CI](https://about.gitlab.com/product/continuous-integration/) 
 
