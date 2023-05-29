@@ -2,7 +2,7 @@
 layout: page
 title: "Servers"
 date: 2019-04-17 00:00:00 +0000
-updated: 2023-05-08 00:00:00 +0000
+updated: 2023-05-29 00:00:00 +0000
 permalink: /servers/
 ---
 
@@ -98,6 +98,11 @@ List of servers (in alphabetical order) that provide a CCTray feed.
 
 * Default feed location `https://api.travis-ci.org/repositories/{user}/{repo}/cc.xml`
 * [Travis CI CCTray documentation](https://docs.travis-ci.com/user/cc-menu/)
+
+### [Woodpecker CI](https://woodpecker-ci.org/)
+
+* Default feed location `/api/badges/{owner}/{repo}/cc.xml`
+  * Example: [https://ci.woodpecker-ci.org/api/badges/woodpecker-ci/woodpecker/cc.xml](https://ci.woodpecker-ci.org/api/badges/woodpecker-ci/woodpecker/cc.xml)
 
 ## Unsupported
 
