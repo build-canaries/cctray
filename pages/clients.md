@@ -2,7 +2,7 @@
 layout: page
 title: "Clients"
 date: 2022-10-12 00:00:00 +0000
-updated: 2022-12-01 00:00:00 +0000
+updated: 2024-09-20 00:00:00 +0000
 permalink: /clients/
 ---
 
@@ -30,6 +30,10 @@ List of clients (in alphabetical order) that can read a CCTray feed.
 ### [CCMenu](https://ccmenu.org/)
 
 * Supported platforms: MacOS
+
+### [cctron](https://github.com/PH1P5/cctron)
+
+* Supported platforms: Linux, MacOS
 
 ### [Nevergreen](https://github.com/build-canaries/nevergreen)
 
