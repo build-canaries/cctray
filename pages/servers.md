@@ -101,7 +101,6 @@ List of servers (in alphabetical order) that currently have no or unknown suppor
 * [Abstruse CI](https://github.com/bleenco/abstruse)
 * [Agola](https://agola.io/)
 * [Appcircle](https://appcircle.io/)
-* [App Center](https://appcenter.ms/)
 * [AppVeyor](https://www.appveyor.com/)
   * [Issue to add support to AppVeyor](https://github.com/appveyor/ci/issues/67)
 * [Azure DevOps](https://azure.microsoft.com/en-us/products/devops/?nav=min)
@@ -124,6 +123,7 @@ List of servers (in alphabetical order) that currently have no or unknown suppor
 
 List of servers (in alphabetical order) that have been discontinued.
 
+* [App Center](https://appcenter.ms/)
 * [Buddybuild](https://www.buddybuild.com/)
 * [CruiseControl](http://cruisecontrol.sourceforge.net/)
 * [CruiseControl.NET](https://ccnet.github.io/CruiseControl.NET/projects/ccnet/wiki.html)
