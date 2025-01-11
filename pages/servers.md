@@ -2,7 +2,7 @@
 layout: page
 title: "Servers"
 date: 2019-04-17 00:00:00 +0000
-updated: 2023-05-29 00:00:00 +0000
+updated: 2025-01-11 00:00:00 +0000
 permalink: /servers/
 ---
 
@@ -59,7 +59,7 @@ List of servers (in alphabetical order) that provide a CCTray feed.
 * Not natively supported
 * Third party plugins
   * [CCTray Hub](https://github.com/idealo/cctray-hub/)
-  * [Github CCTray](https://github.com/mansab/github-cctray) - A lightweight App that provides all Github Workflows of a Repository in CCTray Specification
+  * [Github CCTray](https://github.com/mansab/github-cctray)
 
 ### [Gitlab CI](https://about.gitlab.com/product/continuous-integration/) 
 
@@ -83,11 +83,6 @@ List of servers (in alphabetical order) that provide a CCTray feed.
 * Default feed location `/bk/branch-badge/{branch-id}/cctray`
   * Example: [https://lab.kraken.ci/bk/branch-badge/2/cctray](https://lab.kraken.ci/bk/branch-badge/2/cctray)
 * [Kraken CI CCTray documentation](https://kraken.ci/docs/notifications#cctray)
-
-### [Semaphore](https://semaphoreci.com/)
-
-* Default feed location `/api/v1/projects/{hash_id}/cc.xml?auth_token={auth_token}&ccmenu=cc.xml`
-* [Semaphore CCTray documentation](https://github.com/renderedtext/semaphore-docs-new/blob/master/source/docs/cctry.md)
 
 ### [TeamCity](https://www.jetbrains.com/teamcity/)
 
@@ -123,6 +118,8 @@ List of servers (in alphabetical order) that currently have no or unknown suppor
 * [Codeship](https://codeship.com/)
 * [Evergreen](https://github.com/evergreen-ci/evergreen)
 * [Razorops](https://razorops.com/)
+* [Semaphore](https://semaphoreci.com/)
+ * Support was removed
 * [Vela](https://go-vela.github.io/docs/)
 * [Vexor](https://vexor.io/)
 * [Xcode Cloud](https://developer.apple.com/xcode-cloud/get-started/)
